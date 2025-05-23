@@ -25,18 +25,18 @@ function validateFullName(fullName) {
     return true;
 }
 
-// Validasi NIK (16 digit numerik)
-function validateNIK(nik) {
-    const nikRegex = /^\d{16}$/;
-    if (!nik) {
-        showError('nikError', 'NIK wajib diisi');
+// Validasi NIM (16 digit numerik)
+function validateNIM(nim) {
+    const nimRegex = /^\d{16}$/;
+    if (!nim) {
+        showError('nimError', 'NIM wajib diisi');
         return false;
     }
-    if (!nikRegex.test(nik)) {
-        showError('nikError', 'NIK harus berupa 16 digit angka');
+    if (!nimRegex.test(nim)) {
+        showError('nimError', 'NIM harus berupa 16 digit angka');
         return false;
     }
-    clearError('nikError');
+    clearError('nimError');
     return true;
 }
 
@@ -154,7 +154,7 @@ function validateForm(event) {
     event.preventDefault();
     
     const fullName = document.getElementById('fullName').value;
-    const nik = document.getElementById('nik').value;
+    const nim = document.getElementById('nim').value;
     const email = document.getElementById('email').value;
     const phone = document.getElementById('phone').value;
     const birthDate = document.getElementById('birthDate').value;
@@ -164,7 +164,7 @@ function validateForm(event) {
 
     // Melakukan semua validasi
     const isFullNameValid = validateFullName(fullName);
-    const isNIKValid = validateNIK(nik);
+    const isNIMValid = validateNIM(nim);
     const isEmailValid = validateEmail(email);
     const isPhoneValid = validatePhone(phone);
     const isBirthDateValid = validateBirthDate(birthDate);
@@ -175,7 +175,7 @@ function validateForm(event) {
     const isSymptomsValid = validateSymptoms(symptoms);
 
     // Jika semua validasi berhasil
-    if (isFullNameValid && isNIKValid && isEmailValid && isPhoneValid && 
+    if (isFullNameValid && isNIMValid && isEmailValid && isPhoneValid && 
         isBirthDateValid && isGenderValid && isBloodTypeValid && 
         isDiseasesValid && isAppointmentDateValid && isSymptomsValid) {
         alert('Form berhasil dikirim!');
