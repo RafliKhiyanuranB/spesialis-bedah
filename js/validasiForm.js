@@ -27,13 +27,13 @@ function validateFullName(fullName) {
 
 // Validasi NIM (16 digit numerik)
 function validateNIM(nim) {
-    const nimRegex = /^\d{16}$/;
+    const nimRegex = /^\d{12}$/;
     if (!nim) {
         showError('nimError', 'NIM wajib diisi');
         return false;
     }
     if (!nimRegex.test(nim)) {
-        showError('nimError', 'NIM harus berupa 16 digit angka');
+        showError('nimError', 'NIM harus berupa 12 digit angka');
         return false;
     }
     clearError('nimError');
