@@ -107,17 +107,6 @@ function validateBloodType(bloodType) {
     return true;
 }
 
-// Validasi riwayat penyakit (checkbox)
-function validateDiseases() {
-    const diseasesSelected = document.querySelectorAll('input[name="diseases"]:checked');
-    if (diseasesSelected.length === 0) {
-        showError('diseasesError', 'Pilih minimal satu riwayat penyakit');
-        return false;
-    }
-    clearError('diseasesError');
-    return true;
-}
-
 // Validasi tanggal konsultasi (harus di masa depan)
 function validateAppointmentDate(appointmentDate) {
     if (!appointmentDate) {
@@ -170,7 +159,6 @@ function validateForm(event) {
     const isBirthDateValid = validateBirthDate(birthDate);
     const isGenderValid = validateGender();
     const isBloodTypeValid = validateBloodType(bloodType);
-    const isDiseasesValid = validateDiseases();
     const isAppointmentDateValid = validateAppointmentDate(appointmentDate);
     const isSymptomsValid = validateSymptoms(symptoms);
 

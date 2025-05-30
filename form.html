@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Form pendaftaran pasien untuk spesialis bedah. Isi data pribadi dan konsultasi.">
     <title>Form Pendaftaran - Spesialis Bedah</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/form.css">
@@ -11,8 +12,9 @@
     <!-- Header -->
     <header class="header">
         <div class="container">
-            <div class="logo">
-                <h1>Spesialis Bedah</h1>
+            <div class="text">
+                <h1>Spesialis Bedah Dan Edukasi Pasien</h1>
+                <h3>Ayo Perluas Wawasan-mu mengenai Spesialis Bedan !!!</h3>
             </div>
         </div>
     </header>
@@ -35,14 +37,6 @@
             <div class=content-wrapper>
                 <!--SideBarr-->
                 <aside class="sidebar">
-                    <div class="widget">
-                        <h3>Jadwal Praktik</h3>
-                        <ul>
-                            <li>Senin - Jumat: 08:00 - 16:00</li>
-                            <li>Sabtu: 08:00 - 12:00</li>
-                            <li>Minggu: Tutup</li>
-                        </ul>
-                    </div>
                     <div class="sidebar-box">
                         <div class="widget">
                             <h4>Hal-Hal yang harus dipertimbangkan sebelum operasi medis</h4>
@@ -54,6 +48,7 @@
                                 <li>Pastikan biaya operasi dan apakah ditanggung asuransi</li>
                             </ul>
                         </div>
+                    </div>
                     <div class="sidebar-box">
                         <div class="widget">
                             <h4>Tips Persiapan Sebelum Menjalani Operasi Medis</h4>
@@ -75,37 +70,37 @@
                             <h3>Data Pribadi</h3>
                             
                             <div class="form-group">
-                                <label for="fullName">Nama Lengkap:</label>
+                                <label for="fullName">Nama Lengkap:<a style="color:red; font-size:large;">*</a></label>
                                 <input type="text" id="fullName" name="fullName" placeholder="Masukkan nama lengkap">
                                 <span class="error" id="fullNameError"></span>
                             </div>
 
                             <div class="form-group">
-                                <label for="nik">NIK:</label>
+                                <label for="nik">NIK:<a style="color:red; font-size:large;">*</a></label>
                                 <input type="text" id="nik" name="nik" placeholder="Masukkan NIK 16 digit">
                                 <span class="error" id="nikError"></span>
                             </div>
 
                             <div class="form-group">
-                                <label for="email">Email:</label>
+                                <label for="email">Email:<a style="color:red; font-size:large;">*</a></label>
                                 <input type="text" id="email" name="email" placeholder="contoh@email.com">
                                 <span class="error" id="emailError"></span>
                             </div>
 
                             <div class="form-group">
-                                <label for="phone">Nomor Telepon:</label>
+                                <label for="phone">Nomor Telepon:<a style="color:red; font-size:large;">*</a></label>
                                 <input type="text" id="phone" name="phone" placeholder="08xxxxxxxxxx">
                                 <span class="error" id="phoneError"></span>
                             </div>
 
                             <div class="form-group">
-                                <label for="birthDate">Tanggal Lahir:</label>
+                                <label for="birthDate">Tanggal Lahir:<a style="color:red; font-size:large;">*</a></label>
                                 <input type="date" id="birthDate" name="birthDate">
                                 <span class="error" id="birthDateError"></span>
                             </div>
 
                             <div class="form-group">
-                                <label>Jenis Kelamin:</label>
+                                <label>Jenis Kelamin:<a style="color:red; font-size:large;">*</a></label>
                                 <div class="radio-group">
                                     <input type="radio" id="male" name="gender" value="Laki-laki">
                                     <label for="male">Laki-laki</label>
@@ -121,7 +116,7 @@
                             <h3>Data Medis</h3>
 
                             <div class="form-group">
-                                <label for="bloodType">Golongan Darah:</label>
+                                <label for="bloodType">Golongan Darah:<a style="color:red; font-size:large;">*</a></label>
                                 <select id="bloodType" name="bloodType">
                                     <option value="">Pilih Golongan Darah</option>
                                     <option value="A">A</option>
@@ -146,13 +141,13 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="appointmentDate">Tanggal Konsultasi:</label>
+                                <label for="appointmentDate">Tanggal Konsultasi:<a style="color:red; font-size:large;">*</a></label>
                                 <input type="date" id="appointmentDate" name="appointmentDate">
                                 <span class="error" id="appointmentDateError"></span>
                             </div>
 
                             <div class="form-group">
-                                <label for="symptoms">Gejala/Keluhan:</label>
+                                <label for="symptoms">Gejala/Keluhan:<a style="color:red; font-size:large;">*</a></label>
                                 <textarea id="symptoms" name="symptoms" rows="4" placeholder="Jelaskan gejala atau keluhan Anda"></textarea>
                                 <span class="error" id="symptomsError"></span>
                             </div>
@@ -176,7 +171,6 @@
                     <p>Alamat: Jl. Merpati No. 123</p>
                     <p>Telepon: (021) 123-4567</p>
                     <p>Email: info@spesialisbedah.com</p>
-                </div>
                 </div>
             </div>
         </div>

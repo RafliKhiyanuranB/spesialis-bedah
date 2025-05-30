@@ -1,7 +1,8 @@
+/* form container untuk formulir data pribadi pasien  */
 .form-container {
     max-width: 800px;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 1rem;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 20px rgba(0,0,0,0.1);
@@ -13,6 +14,7 @@
     margin-bottom: 2rem;
 }
 
+/* form section untuk formulir riwayat dan gejala yang di alami pasien */
 .form-section {
     margin-bottom: 2rem;
     padding: 1.5rem;
@@ -27,6 +29,7 @@
     border-bottom: 2px solid #3498db;
 }
 
+/* untuk menampilkan form input data pasien */
 .form-group {
     margin-bottom: 1.5rem;
 }
@@ -71,6 +74,7 @@
     font-weight: normal;
 }
 
+/* Untuk menampilkan error kepada user */
 .error {
     color: #e74c3c;
     font-size: 0.9rem;
@@ -78,6 +82,7 @@
     display: block;
 }
 
+/* submit button */
 .submit-btn {
     background-color: #3498db;
     color: white;
