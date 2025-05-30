@@ -90,6 +90,10 @@ body {
     color: #2c3e50;
     margin-bottom: 1rem;
 }
+.widget h4 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
 
 .widget ul {
     list-style: none;
@@ -97,6 +101,12 @@ body {
 
 .widget li {
     margin-bottom: 0.5rem;
+}
+.sidebar-box{
+    background-color:#b8dafc;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 /* Footer */

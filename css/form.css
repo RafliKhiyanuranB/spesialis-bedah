@@ -39,8 +39,6 @@
 }
 
 .form-group input[type="text"],
-.form-group input[type="email"],
-.form-group input[type="tel"],
 .form-group input[type="date"],
 .form-group select,
 .form-group textarea {
@@ -52,8 +50,6 @@
 }
 
 .form-group input[type="text"]:focus,
-.form-group input[type="email"]:focus,
-.form-group input[type="tel"]:focus,
 .form-group input[type="date"]:focus,
 .form-group select:focus,
 .form-group textarea:focus {
