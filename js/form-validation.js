@@ -108,15 +108,15 @@ function validateBloodType(bloodType) {
 }
 
 // Validasi riwayat penyakit (checkbox)
-function validateDiseases() {
-    const diseasesSelected = document.querySelectorAll('input[name="diseases"]:checked');
-    if (diseasesSelected.length === 0) {
-        showError('diseasesError', 'Pilih minimal satu riwayat penyakit');
-        return false;
-    }
-    clearError('diseasesError');
-    return true;
-}
+// function validateDiseases() {
+//     const diseasesSelected = document.querySelectorAll('input[name="diseases"]:checked');
+//     if (diseasesSelected.length === 0) {
+//         showError('diseasesError', 'Pilih minimal satu riwayat penyakit');
+//         return false;
+//     }
+//     clearError('diseasesError');
+//     return true;
+// }
 
 // Validasi tanggal konsultasi (harus di masa depan)
 function validateAppointmentDate(appointmentDate) {
