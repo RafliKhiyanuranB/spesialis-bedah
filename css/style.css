@@ -159,23 +159,3 @@ body {
     padding-top: 1rem;
     border-top: 1px solid rgba(255,255,255,0.1);
 }
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .content-wrapper {
-        grid-template-columns: 1fr;
-    }
-
-    .main-menu ul {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .main-menu li {
-        margin: 0.5rem 0;
-    }
-
-    .footer-content {
-        grid-template-columns: 1fr;
-    }
-} 

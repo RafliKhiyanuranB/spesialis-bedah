@@ -113,25 +113,3 @@
 .resource-list li:last-child {
     margin-bottom: 0;
 }
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .about-container {
-        padding: 1rem;
-    }
-
-    .task-table {
-        display: block;
-        overflow-x: auto;
-    }
-
-    .task-table th,
-    .task-table td {
-        padding: 0.8rem;
-    }
-
-    .member-list li,
-    .resource-list li {
-        padding: 0.8rem;
-    }
-} 
