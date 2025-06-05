@@ -43,6 +43,14 @@ body {
     font-size: 1.2rem;
 }
 
+.logo-kemenkes{
+    width: 100px;
+}
+
+.logo-halodoc{
+    width: 100px;
+}
+
 /* Menu Navigasi */
 .main-menu {
     background-color: #34495e;

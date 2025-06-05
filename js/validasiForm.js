@@ -25,18 +25,18 @@ function validateFullName(fullName) {
     return true;
 }
 
-// Validasi NIM (16 digit numerik)
-function validateNIM(nim) {
-    const nimRegex = /^\d{12}$/;
-    if (!nim) {
-        showError('nimError', 'NIM wajib diisi');
+// Validasi NIK (16 digit numerik)
+function validateNIK(nik) {
+    const nikRegex = /^\d{16}$/;
+    if (!nik) {
+        showError('nikError', 'NIK wajib diisi');
         return false;
     }
-    if (!nimRegex.test(nim)) {
-        showError('nimError', 'NIM harus berupa 12 digit angka');
+    if (!nikRegex.test(nik)) {
+        showError('nikError', 'NIK harus berupa 16 digit angka');
         return false;
     }
-    clearError('nimError');
+    clearError('nikError');
     return true;
 }
 
@@ -138,12 +138,19 @@ function validateSymptoms(symptoms) {
     return true;
 }
 
+// Validasi riwayat penyakit (opsional, contoh: minimal 1 harus dipilih)
+function validateDiseases() {
+    const checked = document.querySelectorAll('input[name="diseases"]:checked');
+    clearError('diseasesError');
+    return true;
+}
+
 // Fungsi validasi utama
 function validateForm(event) {
     event.preventDefault();
     
     const fullName = document.getElementById('fullName').value;
-    const nim = document.getElementById('nim').value;
+    const nik = document.getElementById('nik').value;
     const email = document.getElementById('email').value;
     const phone = document.getElementById('phone').value;
     const birthDate = document.getElementById('birthDate').value;
@@ -153,17 +160,18 @@ function validateForm(event) {
 
     // Melakukan semua validasi
     const isFullNameValid = validateFullName(fullName);
-    const isNIMValid = validateNIM(nim);
+    const isNIKValid = validateNIK(nik);
     const isEmailValid = validateEmail(email);
     const isPhoneValid = validatePhone(phone);
     const isBirthDateValid = validateBirthDate(birthDate);
     const isGenderValid = validateGender();
     const isBloodTypeValid = validateBloodType(bloodType);
+    const isDiseasesValid = validateDiseases();
     const isAppointmentDateValid = validateAppointmentDate(appointmentDate);
     const isSymptomsValid = validateSymptoms(symptoms);
 
     // Jika semua validasi berhasil
-    if (isFullNameValid && isNIMValid && isEmailValid && isPhoneValid && 
+    if (isFullNameValid && isNIKValid && isEmailValid && isPhoneValid && 
         isBirthDateValid && isGenderValid && isBloodTypeValid && 
         isDiseasesValid && isAppointmentDateValid && isSymptomsValid) {
         alert('Form berhasil dikirim!');
