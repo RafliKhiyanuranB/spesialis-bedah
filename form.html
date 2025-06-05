@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Form pendaftaran pasien untuk spesialis bedah. Isi data pribadi dan konsultasi.">
     <title>Form Pendaftaran - Spesialis Bedah</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/form.css">
@@ -11,8 +12,9 @@
     <!-- Header -->
     <header class="header">
         <div class="container">
-            <div class="logo">
-                <h1>Spesialis Bedah</h1>
+            <div class="text">
+                <h1>Spesialis Bedah Dan Edukasi Pasien</h1>
+                <h3>Ayo Perluas Wawasan-mu mengenai Spesialis Bedah!!!</h3>
             </div>
         </div>
     </header>
@@ -32,101 +34,141 @@
     <!-- Konten Utama -->
     <main class="main-content">
         <div class="container">
-            <div class="form-container">
-                <h2>Form Pendaftaran Pasien</h2>
-                <form id="patientForm" onsubmit="return validateForm(event)"> 
-                    <!-- Data Pribadi -->
-                    <div class="form-section">
-                        <h3>Data Pribadi</h3>
-                        
-                        <div class="form-group">
-                            <label for="fullName">Nama Lengkap:</label>
-                            <input type="text" id="fullName" name="fullName" placeholder="Masukkan nama lengkap">
-                            <span class="error" id="fullNameError"></span>
+            <div class=content-wrapper>
+                <!--SideBarr-->
+                <aside class="sidebar">
+                    <div class="sidebar-box">
+                        <div class="widget">
+                            <h4>Hal-Hal yang harus dipertimbangkan sebelum operasi medis</h4>
+                            <ul style="list-style-type:disc; padding-left:10px;">
+                                <li>Kenali gejala yang anda alami</li>
+                                <li>Pastikan bahwa prosedur operasi atau pembedahan sudah menjadi pilihan yang tepat</li>
+                                <li>Cek rekam jejak dari Dokter yang akan menangani anda</li>
+                                <li>Cek Kelengkapan Fasilitas Rumah sakit yang di gunakan</li>
+                                <li>Pastikan biaya operasi dan apakah ditanggung asuransi</li>
+                            </ul>
                         </div>
+                    </div>
+                    <div class="sidebar-box">
+                        <div class="widget">
+                            <h4>Tips Persiapan Sebelum Menjalani Operasi Medis</h4>
+                            <ul style="list-style-type:disc; padding-left:10px;">
+                                <li>Menjalani gaya hidup sehat</li>
+                                <li>Berpuasa sebelum Operasi</li>
+                                <li>Pemeriksaan kesehatan sebelum operasi</li>
+                                <li>Tidak mengenakan atau membawa aksesori apa pun</li>
+                                <li>Membawa baju ganti yang nyaman</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sidebar-box">
+                        <div class="widget">
+                            <h4>Tips - tips merawat luka pasca operasi</h4>   
+                             <ul style="list-style-type:disc; padding-left:10px;">
+                                <li>Jaga luka operasi tetap kering</li>
+                                <li>Ganti perban penutup luka operasi secara berkala</li>
+                                <li>Lindungi jahitan agar tidak robek</li>
+                                <li>Waktu yang Tepat untuk Melepas Jahitan</li>
+                            </ul>
+                        </div>
+                    </div>
+                </aside>
+                <div class="form-container">
+                    <h2>Form Pendaftaran Pasien</h2>
+                    <form id="patientForm" onsubmit="return validateForm(event)"> 
+                        <!-- Data Pribadi -->
+                        <div class="form-section">
+                            <h3>Data Pribadi</h3>
+                            
+                            <div class="form-group">
+                                <label for="fullName">Nama Lengkap:<a style="color:red; font-size:large;">*</a></label>
+                                <input type="text" id="fullName" name="fullName" placeholder="Masukkan nama lengkap">
+                                <span class="error" id="fullNameError"></span>
+                            </div>
 
                         <div class="form-group">
-                            <label for="nim">NIM:</label>
-                            <input type="text" id="nim" name="nim" placeholder="Masukkan NIM 12 digit">
-                            <span class="error" id="nimError"></span>
+                            <label for="nik">NIK:</label>
+                            <input type="text" id="nik" name="nik" placeholder="Masukkan NIK 16 digit">
+                            <span class="error" id="nikError"></span>
                         </div>
 
                         <div class="form-group">
                             <label for="email">Email:</label>
-                            <input type="text" id="email" name="email" placeholder="contoh@email.com">
+                            <input type="email" id="email" name="email" placeholder="contoh@email.com">
                             <span class="error" id="emailError"></span>
                         </div>
 
                         <div class="form-group">
                             <label for="phone">Nomor Telepon:</label>
-                            <input type="text" id="phone" name="phone" placeholder="08xxxxxxxxxx">
+                            <input type="tel" id="phone" name="phone" placeholder="08xxxxxxxxxx">
                             <span class="error" id="phoneError"></span>
                         </div>
 
-                        <div class="form-group">
-                            <label for="birthDate">Tanggal Lahir:</label>
-                            <input type="date" id="birthDate" name="birthDate">
-                            <span class="error" id="birthDateError"></span>
-                        </div>
-
-                        <div class="form-group">
-                            <label>Jenis Kelamin:</label>
-                            <div class="radio-group">
-                                <input type="radio" id="male" name="gender" value="Laki-laki">
-                                <label for="male">Laki-laki</label>
-                                <input type="radio" id="female" name="gender" value="Perempuan">
-                                <label for="female">Perempuan</label>
+                            <div class="form-group">
+                                <label for="birthDate">Tanggal Lahir:<a style="color:red; font-size:large;">*</a></label>
+                                <input type="date" id="birthDate" name="birthDate">
+                                <span class="error" id="birthDateError"></span>
                             </div>
-                            <span class="error" id="genderError"></span>
-                        </div>
-                    </div>
 
-                    <!-- Data Medis -->
-                    <div class="form-section">
-                        <h3>Data Medis</h3>
-
-                        <div class="form-group">
-                            <label for="bloodType">Golongan Darah:</label>
-                            <select id="bloodType" name="bloodType">
-                                <option value="">Pilih Golongan Darah</option>
-                                <option value="A">A</option>
-                                <option value="B">B</option>
-                                <option value="AB">AB</option>
-                                <option value="O">O</option>
-                            </select>
-                            <span class="error" id="bloodTypeError"></span>
-                        </div>
-
-                        <div class="form-group">
-                            <label>Riwayat Penyakit:</label>
-                            <div class="checkbox-group">
-                                <input type="checkbox" id="diabetes" name="diseases" value="Diabetes">
-                                <label for="diabetes">Diabetes</label>
-                                <input type="checkbox" id="hypertension" name="diseases" value="Hipertensi">
-                                <label for="hypertension">Hipertensi</label>
-                                <input type="checkbox" id="heart" name="diseases" value="Jantung">
-                                <label for="heart">Jantung</label>
+                            <div class="form-group">
+                                <label>Jenis Kelamin:<a style="color:red; font-size:large;">*</a></label>
+                                <div class="radio-group">
+                                    <input type="radio" id="male" name="gender" value="Laki-laki">
+                                    <label for="male">Laki-laki</label>
+                                    <input type="radio" id="female" name="gender" value="Perempuan">
+                                    <label for="female">Perempuan</label>
+                                </div>
+                                <span class="error" id="genderError"></span>
                             </div>
-                            <span class="error" id="diseasesError"></span>
+                        </div>
+
+                        <!-- Data Medis -->
+                        <div class="form-section">
+                            <h3>Data Medis</h3>
+
+                            <div class="form-group">
+                                <label for="bloodType">Golongan Darah:<a style="color:red; font-size:large;">*</a></label>
+                                <select id="bloodType" name="bloodType">
+                                    <option value="">Pilih Golongan Darah</option>
+                                    <option value="A">A</option>
+                                    <option value="B">B</option>
+                                    <option value="AB">AB</option>
+                                    <option value="O">O</option>
+                                </select>
+                                <span class="error" id="bloodTypeError"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Riwayat Penyakit:</label>
+                                <div class="checkbox-group">
+                                    <input type="checkbox" id="diabetes" name="diseases" value="Diabetes">
+                                    <label for="diabetes">Diabetes</label>
+                                    <input type="checkbox" id="hypertension" name="diseases" value="Hipertensi">
+                                    <label for="hypertension">Hipertensi</label>
+                                    <input type="checkbox" id="heart" name="diseases" value="Jantung">
+                                    <label for="heart">Jantung</label>
+                                </div>
+                                <span class="error" id="diseasesError"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="appointmentDate">Tanggal Konsultasi:<a style="color:red; font-size:large;">*</a></label>
+                                <input type="date" id="appointmentDate" name="appointmentDate">
+                                <span class="error" id="appointmentDateError"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="symptoms">Gejala/Keluhan:<a style="color:red; font-size:large;">*</a></label>
+                                <textarea id="symptoms" name="symptoms" rows="4" placeholder="Jelaskan gejala atau keluhan Anda"></textarea>
+                                <span class="error" id="symptomsError"></span>
+                            </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="appointmentDate">Tanggal Konsultasi:</label>
-                            <input type="date" id="appointmentDate" name="appointmentDate">
-                            <span class="error" id="appointmentDateError"></span>
+                            <button type="submit" class="submit-btn">Kirim Formulir</button>
                         </div>
-
-                        <div class="form-group">
-                            <label for="symptoms">Gejala/Keluhan:</label>
-                            <textarea id="symptoms" name="symptoms" rows="4" placeholder="Jelaskan gejala atau keluhan Anda"></textarea>
-                            <span class="error" id="symptomsError"></span>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <button type="submit" class="submit-btn">Kirim Formulir</button>
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
         </div>
     </main>
@@ -137,7 +179,7 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>Kontak</h3>
-                    <p>Alamat: Jl. Contoh No. 123</p>
+                    <p>Alamat: Jl. Merpati No. 123</p>
                     <p>Telepon: (021) 123-4567</p>
                     <p>Email: info@spesialisbedah.com</p>
                 </div>

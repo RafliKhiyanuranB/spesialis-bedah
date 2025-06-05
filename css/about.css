@@ -1,3 +1,4 @@
+/* Menampilkan Informasi tentang Mata Kuliah */
 .about-container {
     max-width: 1000px;
     margin: 0 auto;
@@ -22,6 +23,7 @@
     border-bottom: 1px solid #3498db;
 }
 
+/*Menampilkan informasi tentang tim pengembang */
 .info-card {
     background-color: #f8f9fa;
     padding: 1.5rem;
@@ -94,6 +96,7 @@
     margin-bottom: 0;
 }
 
+/* Menampilkann Daftar Sumber reverensi */
 .resource-list {
     list-style: none;
     padding: 0;
@@ -110,25 +113,3 @@
 .resource-list li:last-child {
     margin-bottom: 0;
 }
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .about-container {
-        padding: 1rem;
-    }
-
-    .task-table {
-        display: block;
-        overflow-x: auto;
-    }
-
-    .task-table th,
-    .task-table td {
-        padding: 0.8rem;
-    }
-
-    .member-list li,
-    .resource-list li {
-        padding: 0.8rem;
-    }
-} 
